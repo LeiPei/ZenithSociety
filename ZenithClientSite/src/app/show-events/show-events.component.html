@@ -1,0 +1,79 @@
+<div class="container">
+<div class="jumbotron">
+    <h1>Welcome to ZenithSociety</h1>
+    <p class="lead" style="color:antiquewhite">The Zenith Society is a family oriented non-for-profit organization that holds events during 
+    the week.</p>
+</div>
+</div>
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+      <button (click)="getPreviousEvents()" *ngIf="(authInfo.isMemberOrAdmin)" class="col-md-offset-3">< previous</button>
+    </div>
+    <div class="col-md-6">
+      <button (click)="getNextEvents()" *ngIf="(authInfo.isMemberOrAdmin)" class="col-md-offset-3">> next</button>
+    </div>
+</div>
+<div class="row">
+
+<table class="table" border="1">
+       <tr *ngIf="Mon.length!=0">
+            <th class="text-center label-info" colspan="2">{{Mon[0].date}}</th>
+        </tr>    
+        <tr *ngFor="let e of Mon">
+            <td>{{e.timeFrom}} - {{e.timeTo}}</td>
+            <td>{{e.activity}}</td>
+        </tr>
+    
+        <tr *ngIf="Tue.length!=0">
+            <th class="text-center label-info" colspan="2">{{Tue[0].date}}</th>
+        </tr>   
+        <tr *ngFor="let e of Tue">
+            <td>{{e.timeFrom}} - {{e.timeTo}}</td>
+            <td>{{e.activity}}</td>
+        </tr>
+
+        <tr *ngIf="Wed.length!=0">
+            <th class="text-center label-info" colspan="2">{{Wed[0].date}}</th>
+        </tr>
+        <tr *ngFor="let e of Wed">
+            <td>{{e.timeFrom}} - {{e.timeTo}}</td>
+            <td>{{e.activity}}</td>
+        </tr>
+
+        <tr *ngIf="Thu.length!=0">
+            <th class="text-center label-info" colspan="2">{{Thu[0].date}}</th>
+        </tr>
+        <tr *ngFor="let e of Thu">
+            <td>{{e.timeFrom}} - {{e.timeTo}}</td>
+            <td>{{e.activity}}</td>
+        </tr>
+        
+        <tr *ngIf="Fri.length!=0">
+            <th class="text-center label-info" colspan="2">{{Fri[0].date}}</th>
+        </tr>
+        <tr *ngFor="let e of Fri">
+            <td>{{e.timeFrom}} - {{e.timeTo}}</td>
+            <td>{{e.activity}}</td>
+        </tr>
+
+        <tr *ngIf="Sat.length!=0">
+            <th class="text-center label-info" colspan="2">{{Sat[0].date}}</th>
+        </tr>
+        <tr *ngFor="let e of Sat">
+            <td>{{e.timeFrom}} - {{e.timeTo}}</td>
+            <td>{{e.activity}}</td>
+        </tr>
+
+        <tr *ngIf="Sun.length!=0">
+            <th class="text-center label-info" colspan="2">{{Sun[0].date}}</th>
+        </tr>
+        <tr *ngFor="let e of Sun">
+            <td>{{e.timeFrom}} - {{e.timeTo}}</td>
+            <td>{{e.activity}}</td>
+        </tr>
+   
+
+</table>
+</div>
+</div>
